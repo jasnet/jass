@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasneet Singh - Frontend Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        :root {
+            --main-color: #0ef; /* Neon Blue */
+            --bg-color: #121212; /* Dark background */
+            --text-color: #ffffff; /* Light text color */
+            --secondary-color: #333333; /* Darker grey for some elements */
+            --btn-hover-color: #0a7b99; /* Dark blue hover color */
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: 0.3s;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: var(--text-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 18px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            color: var(--main-color);
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 70px 10%;
+        }
+
+        .home-content {
+            max-width: 600px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .home-content p {
+            font-size: 16px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .btn-box {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-box a {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: var(--bg-color);
+            background: var(--main-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--main-color);
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-box a:hover {
+            background: transparent;
+            color: var(--main-color);
+            border-color: var(--main-color);
+        }
+
+        /* Social Icons */
+        .home-sci {
+            position: absolute;
+            bottom: 40px;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .home-sci a {
+            background: transparent;
+            border: 2px solid var(--main-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            color: var(--main-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .home-sci a:hover {
+            color: var(--bg-color);
+            background: var(--main-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 10%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact h2 {
+            font-size: 45px;
+            margin-bottom: 30px;
+            color: var(--main-color);
+        }
+
+        .contact form {
+            max-width: 600px;
+            width: 100%;
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact form .input-box {
+            margin-bottom: 20px;
+        }
+
+        .contact form .input-box input,
+        .contact form .input-box textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: var(--text-color);
+            background: transparent;
+            border: 2px solid var(--main-color);
+            border-radius: var(--border-radius);
+            margin-top: 8px;
+            transition: 0.3s;
+        }
+
+        .contact form .input-box input:focus,
+        .contact form .input-box textarea:focus {
+            border-color: var(--main-color);
+        }
+
+        .contact form button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: var(--bg-color);
+            background: var(--main-color);
+            border: 2px solid var(--main-color);
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact form button:hover {
+            background: transparent;
+            color: var(--main-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="#" class="logo">Jasneet.</a>
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contect.html">Contact</a>
+    </nav>
+</header>
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h1>Hi, I'm Jasneet Singh</h1>
+        <h3>Frontend Developer</h3>
+        <p>Creating intuitive and visually appealing web experiences that engage users through responsive and interactive design.</p>
+        <div class="btn-box">
+            <a href="Resume cvv.pdf" download>Download Resume</a>
+            <a href="contact.">Let's Talk</a>
+        </div>
+    </div>
+    <div class="home-sci">
+        <a href="https://facebook.com/yourusername"><i class='bx bxl-facebook'></i></a>
+        <a href="https://twitter.com/yourusername"><i class='bx bxl-twitter'></i></a>
+        <a href="https://linkedin.com/in/yourusername"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/yourusername"><i class='bx bxl-github'></i></a>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="POST">
+        <div class="input-box">
+            <input type="text" placeholder="Jasneet singh" required>
+            <input type="email" placeholder="jassusinghn@gmail.com" required>
+        </div>
+        <div class="input-box">
+            <input type="tel" placeholder="7089160973" pattern="[0-9]{10}" required>
+            <input type="text" placeholder="Subject" required>
+        </div>
+        <div class="input-box">
+            <textarea placeholder="Your Message" maxlength="500" required></textarea>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Company (Optional)">
+            <input type="text" placeholder="Your Website (Optional)">
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+    <div style="text-align: center; margin-top: 30px;">
+        <p>Or reach me directly at:</p>
+        <p>Email: contact@jasneetsingh.com</p>
+        <p>Phone: +91 7089160973</p>
+        <p>Location: Bangalore, India</p>
+    </div>
+</section>
+
+</body>
+</html>

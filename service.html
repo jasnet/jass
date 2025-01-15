@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #0ef; /* Bright accent color */
+            --bg-color: #000; /* Black background */
+            --text-color: #fff; /* White text color */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Services Section */
+        .services {
+            min-height: 100vh;
+            padding: 50px 10%;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .services h2 {
+            font-size: 45px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--main-color);
+        }
+
+        .services-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service-box {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .service-box i {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: var(--main-color);
+        }
+
+        .service-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .services-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-box {
+                width: 80%;
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <h2>Services I Offer</h2>
+    <div class="services-content">
+        <div class="service-box">
+            <i class="bx bx-laptop"></i>
+            <h3>Frontend Development</h3>
+            <p>I create visually appealing and responsive user interfaces using the latest frontend technologies such as HTML5, CSS3, JavaScript, and modern frameworks like React.js and Vue.js.</p>
+        </div>
+
+        <div class="service-box">
+            <i class="bx bx-server"></i>
+            <h3>Backend Development</h3>
+            <p>I design robust and scalable backend systems using Node.js, Express, and various databases like MongoDB and MySQL to handle complex business logic and data management.</p>
+        </div>
+
+        <div class="service-box">
+            <i class="bx bx-cloud"></i>
+            <h3>Cloud Integration</h3>
+            <p>I integrate cloud services such as AWS and Google Cloud to deploy applications, manage databases, and ensure smooth scalability with automatic resource management.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
